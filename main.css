@@ -1,0 +1,261 @@
+.scroll-none {
+  overflow: none;
+}
+
+body {
+  background: #000;
+  font-family: Arial;
+}
+
+.stories {
+  position: relative;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+.proto-nav {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  z-index: 5;
+  transform: translateY(-50%);
+}
+
+.proto-nav li {
+  margin-bottom: 12px;
+}
+
+.proto-nav li:last-child {
+  margin: 0;
+}
+
+.proto-nav a {
+  color: #858688;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.proto-nav .on {
+  color: #fff;
+}
+
+.proto-nav a:active {
+  color: #000;
+}
+
+.chh-narrative {
+  color: #fff;
+  background: #1C2329;
+  min-height: 100%;
+  transition: transform 500ms ease;
+  transform: translateY(102vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chh-narrative p {
+  line-height: 1.5;
+}
+
+.chh-narrative .chh-narrative-lead {
+  line-height: 1.3;
+}
+
+.chh-narrative.on {
+  transform: translateY(0);
+}
+
+.chh-narrative.n206 {
+  background: #6A3025;
+}
+
+.chh-narrative-body {
+  max-width: 640px;
+}
+
+.chh-narrative-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'futura-pt';
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.chh-narrative-lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+}
+
+.links-drawer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 6.25em 0 1.875em 0;
+  transition: all 250ms 350ms ease;
+  transform: translateY(100%);
+}
+
+.links-drawer.on {
+  transform: translateY(0);
+}
+
+.links-drawer.expanded {
+  width: auto;
+  transition-delay: 0s;
+  transform: translateY(0);
+  transform: translateY(-200%);
+  background-image: 0;
+  background: 0;
+  padding: 0;
+  font-size: 21px;
+}
+
+.links-drawer.expanded .lidr__heading {
+  display: none;
+}
+
+.links-drawer.expanded .lidr__all-button {
+  display: none;
+}
+
+.lidr__mast {
+  display: table;
+  margin: 0 auto;
+}
+
+.lidr__heading {
+  color: #fff;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  margin-bottom: 2.85714em;
+  font-size: 0.875em;
+  font-family: 'futura-pt';
+}
+
+.lidr__heading .text {
+  display: block;
+}
+
+.lidr__heading-icon {
+  fill: #fff;
+  display: block;
+  width: 0.85714em;
+  height: 0.5em;
+  margin-left: 0.85714em;
+  transform: rotate(180deg);
+}
+
+.lidr__main {
+  display: flex;
+}
+
+.lidr__list-w {
+  overflow: hidden;
+}
+
+.lidr__list {
+  font-family: 'futura-pt';
+  color: #fff;
+  display: grid;
+  grid-gap: 3em;
+  grid-row-gap: 1.875em;
+  grid-auto-flow: column;
+  margin-right: 3em;
+}
+
+.lidr__list li {
+  overflow: hidden;
+}
+
+.expanded .lidr__list {
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 15em);
+}
+
+.collapsed .lidr__list li:nth-child(n+3) {
+  display: none;
+}
+
+.lidr__list-link {
+  color: #fff;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.875em;
+}
+
+.lidr__list-link .text {
+  display: block;
+  line-height: 1.2;
+  hyphens: auto;
+}
+
+.lidr__list-link .image {
+  flex-shrink: 0;
+  display: block;
+  background-color: #3D3738;
+  margin-right: 0.85714em;
+  width: 4.57143em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lidr__list-link .image--fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lidr__list-link .image--fallback img {
+  width: 0.85714em;
+  height: 0.92857em;
+  display: block;
+}
+
+.lidr__list-link:hover {
+  opacity: 0.9;
+}
+
+.lidr__list-link:active {
+  opacity: 0.7;
+}
+
+.lidr__all-button {
+  font-family: 'futura-pt';
+  background: #858688;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  padding: 0 20px;
+  height: 42px;
+  border-radius: 48px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.lidr__all-button:hover {
+  opacity: 1;
+  background: #5B48FF;
+}
+
+.lidr__all-button:active {
+  opacity: 0.8;
+}
+
+.scroll-none .proto-nav,
+.scroll-none .chh-narrative-body {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.05;
+}

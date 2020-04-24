@@ -1,0 +1,26 @@
+{
+  "name": "stories-241",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --output-style expanded --watch main.scss -o .",
+    "dev": "http-server -c-1 & npm run scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjoanisse/proto-stories-241.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjoanisse/proto-stories-241/issues"
+  },
+  "homepage": "https://github.com/mjoanisse/proto-stories-241#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.0",
+    "http-server": "^0.12.1"
+  },
+  "description": ""
+}
