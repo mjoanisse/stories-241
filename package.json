@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/mjoanisse/proto-stories-241#readme",
   "devDependencies": {
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "http-server": "^0.12.1"
   },
   "description": ""
